@@ -6,6 +6,16 @@
    <style>
        /* Add styles here */
    </style>
+    <!-- Import the required widget code and styles. -->
+  <script src="https://moscowtime.xyz/widget.js"></script>
+  <!-- When the window has finished loading, mount the widget in its appropriate place. -->
+  <script>
+    let blockClock;
+    window.onload = function () {
+      blockClock = mountBlockClock();
+    };
+  </script>
+  <!-- NOTE: BLOCKCLOCK is a registered trademark of Coinkite Inc. -->
 </head>
 <body>
    <!-- Header -->
@@ -26,6 +36,12 @@
            <h2 class="text-center mb-0">About Us</h2>
            <p class="mb-0">We provide technology solutions for small businesses in Virginia. Our mission is to empower entrepreneurs and help them grow their business through innovative tech tools.</p>
        </div>
+
+       <div
+        id="blockclock-container"
+        class="moscowtime usdprice blockheight interval-3000"
+        style="max-width: 400px"
+        ></div>
    </section>
    
    <!-- Services Section -->
