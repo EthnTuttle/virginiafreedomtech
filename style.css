@@ -23,7 +23,7 @@
 }
 
 .nav-link {
-    color: #FFA90A !important;
+    color: black !important;
 }
 
 .nav-link:active, .nav-link:focus, .nav-link:hover {
@@ -47,11 +47,11 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #FFA90A;
+    color: #ef8030;
 }
 
 .logo {
-    color: #ef8030;
+    color: black;
 }
 
 .neo-block {
@@ -59,12 +59,19 @@ h1, h2, h3, h4, h5, h6 {
     border: 2px solid black;
     border-radius: 12px;
     box-shadow: 8px 8px 0 #ef8030;
-    margin: 62px auto;
     max-width: 1351px;
-    padding: 42px 0;
     position: relative;
 }
 
 .container {
     max-width: 1440px !important;
+}
+
+.mb-5 {
+    margin-bottom: 60px !important; 
+}
+
+
+.rounded-12 {
+    border-radius: 12px;
 }
