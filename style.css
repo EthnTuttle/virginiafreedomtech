@@ -23,11 +23,15 @@
 }
 
 .nav-link {
-    color: #6852F7 !important;
+    color: black !important;
 }
 
 .nav-link:active, .nav-link:focus, .nav-link:hover {
     color: #FFA90A !important;
+}
+
+.bg-neo {
+    background-color: #8C83F6;
 }
 
 .bg-color {
@@ -39,9 +43,40 @@ body {
 }
 
 .text-color-base {
-    color: #6852F7;
+    color: #000420;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #FFA90A;
+    color: #ef8030;
+}
+
+.text-large {
+    font-size: calc(4rem + 1.5vw) !important; 
+    color: #ef8030;
+}
+
+.logo {
+    color: black;
+}
+
+.neo-block {
+    background: #8C83F6;
+    border: 2px solid black;
+    border-radius: 12px;
+    box-shadow: 8px 8px 0 #ef8030;
+    max-width: 1351px;
+    position: relative;
+}
+
+.container {
+    max-width: 1440px !important;
+}
+
+.mb-5 {
+    margin-bottom: 60px !important; 
+}
+
+
+.rounded-12 {
+    border-radius: 12px;
 }
