@@ -55,6 +55,10 @@ h1, h2, h3, h4, h5, h6 {
     color: #ef8030;
 }
 
+.price-text {
+    color: #7c431a    
+}
+
 .logo {
     color: black;
 }
@@ -76,7 +80,10 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 60px !important; 
 }
 
-
 .rounded-12 {
     border-radius: 12px;
+}
+
+.price-color {
+    color: #FFA90A;
 }
