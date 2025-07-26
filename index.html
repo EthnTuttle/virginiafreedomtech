@@ -14,11 +14,6 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.min.js"
-      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-      crossorigin="anonymous"
-    ></script>
   </head>
 
   <body class="bg-color">
@@ -175,7 +170,6 @@
               <div class="card-body bg-neo border-0 py-4">
                 <h4 class="text-dark fw-bold">Cold Card Mk4</h4>
                 <p class="text-color-base mb-3">The world's most trusted and secure Bitcoin hardware wallet</p>
-                <p id="coldcard-price" class="price-color mb-3">Price: ~$165</p>
                 <div class="d-grid gap-2">
                   <a href="https://pay.zaprite.com/pl_f2OGyfNGRj" target="_blank" class="btn btn-primary">Buy Now (With Shipping)</a>
                   <a href="https://pay.zaprite.com/pl_IkP4Ikhdc7" target="_blank" class="btn btn-outline-secondary">In-Person Sales</a>
@@ -191,7 +185,6 @@
               <div class="card-body bg-neo border-0 py-4">
                 <h4 class="text-dark fw-bold">Sovereign Computing</h4>
                 <p class="text-color-base mb-3">Custom small form factor computers with FOSS configuration</p>
-                <p class="price-color mb-3">Price: varies on specifics</p>
                 <p class="text-color-base small">Contact sales for custom solutions</p>
               </div>
             </div>
@@ -438,41 +431,5 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    <script>
-      $(document).ready(function () {
-        const decimals = {
-          BTC: 8,
-          Sat: 0,
-        };
-
-        // Function to fetch and update prices
-        function updatePrices() {
-          $.getJSON("https://mempool.space/api/v1/prices", function (data) {
-            const usdPriceColdCard = 165;
-            const usdPriceBitAxe = 145;
-            const usdPrice = parseInt(data.USD);
-            const moscowTime = Math.round((1 / usdPrice) * 100000000);
-
-            const satPriceColdCard =
-              moscowTime * usdPriceColdCard;
-            const satPriceBitAxe =
-              moscowTime * usdPriceBitAxe;
-
-            $("#coldcard-price").text(
-              `Price: ~${satPriceColdCard} sats ($${usdPriceColdCard})`
-            );
-            $("#bitaxe-price").text(
-              `Price: ~${satPriceBitAxe} sats ($${usdPriceBitAxe})`
-            );
-          });
-        }
-
-        // Call the function initially when the page loads
-        updatePrices();
-
-        // Update prices every minute
-        setInterval(updatePrices, 60 * 1000);
-      });
-    </script>
   </body>
 </html>
