@@ -1,58 +1,84 @@
 .btn-primary {
-    background-color:  #EE731B !important;
+    background: linear-gradient(135deg, #f7931a 0%, #ff6b35 100%) !important;
     border: none !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(247, 147, 26, 0.4);
+    color: white !important;
 }
 
 .border-nav {
-    border-bottom: 1px solid #FFA90A !important;
+    border-bottom: 3px solid #8b5cf6 !important;
 }
 
 .btn-primary:hover {
-    background-color:  #FFA90A !important;
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931a 100%) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.5);
 }
 
 .btn-outline-secondary {
-    border: 1px solid #8C83F6 !important;
-    color: #8C83F6 !important;
+    border: 2px solid #8b5cf6 !important;
+    color: #8b5cf6 !important;
     background-color: transparent;
 }
 
 .btn-outline-secondary:hover {
-    background-color: #8C83F6 !important;
-    color: black !important;
+    background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%) !important;
+    color: white !important;
+    border-color: #a855f7 !important;
 }
 
-.nav-link {
-    color: black !important;
-}
+/* Overridden by dark theme styles above */
 
 .nav-link:active, .nav-link:focus, .nav-link:hover {
-    color: #FFA90A !important;
+    color: #f7931a !important;
 }
 
 .bg-neo {
-    background-color: #8C83F6;
+    background: linear-gradient(145deg, #1a1a1a 0%, #2d2d2d 100%);
+    border: 1px solid rgba(139, 92, 246, 0.2);
 }
 
 .bg-color {
-    background-color: #000420;
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+    min-height: 100vh;
 }
 
 body {
-    color: #6852F7 !important;
+    color: #e2e8f0 !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #0f0f0f;
+}
+
+/* Ensure all paragraph text is visible */
+p {
+    color: #cbd5e0 !important;
+}
+
+/* Hero section text */
+.hero-section p {
+    color: #e2e8f0 !important;
 }
 
 .text-color-base {
-    color: #000420;
+    color: #e2e8f0 !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #ef8030;
+    color: #f7fafc !important;
+    font-weight: 700;
 }
 
 .text-large {
     font-size: calc(4rem + 1.5vw) !important; 
-    color: #ef8030;
+    background: linear-gradient(135deg, #8b5cf6 0%, #f7931a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
 }
 
 .price-text {
@@ -64,12 +90,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .neo-block {
-    background: #8C83F6;
-    border: 2px solid black;
-    border-radius: 12px;
-    box-shadow: 8px 8px 0 #ef8030;
+    background: linear-gradient(145deg, #1a1a1a 0%, #2d2d2d 100%);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3), 0 2px 8px rgba(139, 92, 246, 0.1);
     max-width: 1351px;
     position: relative;
+    backdrop-filter: blur(10px);
 }
 
 .container {
@@ -85,5 +112,335 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .price-color {
+    color: #f7931a;
+    font-weight: 600;
+}
+
+.btn-primary {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.small {
+    font-size: 0.875rem;
+}
+
+/* BitAxe link styling */
+.bitaxe-link {
+    color: #f7931a !important;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.bitaxe-link:hover {
+    color: #ff6b35 !important;
+    text-decoration: underline;
+}
+
+/* Meshtastic link styling */
+.meshtastic-link {
+    color: #8b5cf6 !important;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.meshtastic-link:hover {
+    color: #a855f7 !important;
+    text-decoration: underline;
+}
+
+/* Dark theme navigation */
+.nav-link {
+    color: #cbd5e0 !important;
+    font-weight: 500;
+}
+
+.logo {
+    color: #f7fafc !important;
+    font-weight: 700;
+}
+
+/* Dark theme card text */
+.card .text-dark {
+    color: #f7fafc !important;
+}
+
+.card .text-color-base {
+    color: #cbd5e0 !important;
+}
+
+/* Override any conflicting text colors */
+.neo-block .text-color-base {
+    color: #cbd5e0 !important;
+}
+
+.neo-block h1, .neo-block h2, .neo-block h3, .neo-block h4, .neo-block h5, .neo-block h6 {
+    color: #f7fafc !important;
+}
+
+/* Ensure small text is visible */
+.small {
+    color: #a0aec0 !important;
+}
+
+/* Price text visibility */
+.price-color {
+    color: #f7931a !important;
+    font-weight: 600;
+}
+
+/* About section text */
+#about .text-dark {
+    color: #f7fafc !important;
+}
+
+#about p {
+    color: #cbd5e0 !important;
+}
+
+/* Services section text */
+#services .text-dark {
+    color: #f7fafc !important;
+}
+
+#services .text-color-base {
+    color: #cbd5e0 !important;
+}
+
+/* Contact section text */
+#contact .text-color-base {
+    color: #cbd5e0 !important;
+}
+
+#contact h2 {
+    color: #f7fafc !important;
+}
+
+#contact p {
+    color: #cbd5e0 !important;
+}
+
+/* Footer text */
+footer {
+    color: #a0aec0 !important;
+}
+
+footer p {
+    color: #a0aec0 !important;
+}
+
+/* Links */
+a {
+    color: #f7931a !important;
+}
+
+a:hover {
+    color: #ff6b35 !important;
+}
+
+/* Make sure all card body text is visible */
+.card-body p {
+    color: #cbd5e0 !important;
+}
+
+.card-body h4 {
+    color: #f7fafc !important;
+}
+
+/* Product section headers */
+.product-section h3 {
+    color: #f7fafc !important;
+}
+
+/* Override Bootstrap text colors */
+.text-center {
+    color: inherit !important;
+}
+
+/* Ensure button text is visible */
+.btn {
+    color: white !important;
+}
+
+/* Enhanced dark styling */
+.container {
+    position: relative;
+}
+
+/* Bitaxe.org inspired minimal styling */
+.tech-minimal {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 0.9rem;
+    color: #8b5cf6;
+    border: 1px dashed #8b5cf6;
+    padding: 0.5rem 1rem;
+    background: rgba(139, 92, 246, 0.05);
+    border-radius: 4px;
+    display: inline-block;
+    margin: 0.5rem 0;
+}
+
+/* Enhanced product section styling */
+.card {
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    transition: all 0.3s ease;
+    background: linear-gradient(145deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+.card:hover {
+    border-color: rgba(247, 147, 26, 0.4);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(247, 147, 26, 0.2);
+}
+
+/* Product section improvements */
+.product-section {
+    margin-bottom: 4rem;
+}
+
+.product-category-title {
+    color: #ef8030;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.product-category-subtitle {
+    color: #000420;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* Button enhancements */
+.btn-outline-secondary {
+    border: 2px solid #8C83F6 !important;
+    color: #8C83F6 !important;
+    background-color: transparent;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #8C83F6 !important;
+    color: #fff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(140, 131, 246, 0.3);
+}
+
+/* Service section improvements */
+.service-icon {
+    background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+}
+
+.service-icon svg {
+    fill: white !important;
+}
+
+/* Expertise badges */
+.expertise-badge {
+    background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    display: inline-block;
+    margin: 0.25rem;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+    transition: all 0.3s ease;
+}
+
+.expertise-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(168, 85, 247, 0.5);
+}
+
+/* Improved spacing and layout */
+.section-divider {
+    margin: 5rem 0;
+}
+
+/* Hero section improvements */
+.hero-cta {
+    background: linear-gradient(135deg, #f7931a 0%, #ff6b35 100%) !important;
+    border: none;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(247, 147, 26, 0.4);
+    color: white !important;
+}
+
+.hero-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.6);
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931a 100%) !important;
+}
+
+/* Card body improvements */
+.card-body {
+    padding: 2rem !important;
+}
+
+.card-title {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.card-text {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Price styling */
+.price-display {
+    font-size: 1.1rem;
+    font-weight: 700;
     color: #FFA90A;
+    margin-bottom: 1rem;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 2rem;
+    }
+    
+    .text-large {
+        font-size: calc(2.5rem + 1vw) !important;
+    }
+    
+    .hero-cta {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
 }
