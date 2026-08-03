@@ -212,6 +212,16 @@ h1, h2, h3, h4, h5, h6 {
     color: #f7fafc !important;
 }
 
+/* Product advisory / warning card */
+.advisory-block {
+    border: 1px solid rgba(247, 147, 26, 0.55);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3), 0 2px 8px rgba(247, 147, 26, 0.15);
+}
+
+.advisory-block h4 {
+    color: #f7931a !important;
+}
+
 #about p {
     color: #cbd5e0 !important;
 }
